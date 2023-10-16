@@ -25,5 +25,6 @@ int main(void)
 		letra++;
 		i++;
 	}
+	putchar ('\n');
 	return (0);
 }
