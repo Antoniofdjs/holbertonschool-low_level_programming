@@ -2,14 +2,21 @@
 /**
  * main- funcion del main entry
  *
- * @vars: proposito
  *
  *Return: devolver 0
  *
 */
 int main(void)
 {
-	printf("bla bla\n");
-	return(0);
+	char letra = 'a';
+	int i = 0;
 
+	while (i < 26)
+	{
+		putchar (letra);
+		letra++;
+		i++;
+	}
+	putchar ('\n');
+	return (0);
 }
