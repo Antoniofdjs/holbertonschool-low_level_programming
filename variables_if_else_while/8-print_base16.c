@@ -19,7 +19,7 @@ int main(void)
 	}
 	letra = 'a';
 	i = 0;
-	while (i < 8)
+	while (i < 6)
 	{
 		putchar (letra);
 		letra++;
