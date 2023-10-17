@@ -1,19 +1,14 @@
+#include "main.h"
 #include <stdio.h>
-#include <unistd.h>
 /**
- *main - Entry point
+ *print_alphabet - Print the alphabet
  *
- *Return: 0
  */
-int main(void)
-
+void print_alphabet(void)
 {
 	char letra = 'a';
 
-	for(letra = 'a'; letra <= 'z'; letra++)
-	{
-		putchar(letra);
-	}
-	putchar('\n');
-return (0);
+	for (letra = 'a'; letra <= 'z'; letra++)
+		_putchar(letra);
+	_putchar('\n');
 }
