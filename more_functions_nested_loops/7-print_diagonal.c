@@ -25,7 +25,7 @@ void print_diagonal(int n)
 				_putchar('\\');
 				}
 				else
-					if ( k != 0)
+					if (k != 0)
 						_putchar(' ');
 			}
 				_putchar('\\');
@@ -36,5 +36,5 @@ void print_diagonal(int n)
 
 
 	}
-	
+
 }
