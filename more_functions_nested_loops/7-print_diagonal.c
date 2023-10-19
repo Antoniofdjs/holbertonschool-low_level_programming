@@ -8,7 +8,7 @@
 void print_diagonal(int n)
 {
 	int x = 0, i, spc;
-	int j = n - 1, k = 1;
+	int j = n - 1, k = 0;
 
 	if (n == 0)
 	{
