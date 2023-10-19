@@ -10,16 +10,16 @@ void print_diagonal(int n)
 	int x = 0, i, spc;
 	int j = n - 1, k = 0;
 
-	if (n == 0)
+	if (n <= 0)
 	{
 		_putchar('\n');
 	}
 	else
 		for (i = 0; i <= n; i++)/* Number of lines to makee*/
 	{
-		for (; j > x; x++)/* Number of times to make white spaces before the \ */
+		for (; j >= x; x++)/* Number of times to make white spaces before the \ */
 		{
-			for (; spc < k; spc++)/*loop for putting number of spaces in the line \ */
+			for (; spc <= k; spc++)/*loop for putting number of spaces in the line \ */
 			{
 				_putchar(' ');/*Puts the white space before the \ and new line*/
 			}
