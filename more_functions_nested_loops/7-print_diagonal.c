@@ -18,7 +18,7 @@ void print_diagonal(int n)
 	{
 		for (; j >= x; x++) /*Number of times to make white spaces before the \ */
 		{
-			for (; spc <= k; spc++)/*loop for putting number of spaces in the line \ */
+			for (; spc < k; spc++)/*loop for putting number of spaces in the line \ */
 			{
 				if (k == 0)
 				{
@@ -27,7 +27,10 @@ void print_diagonal(int n)
 				else
 					_putchar(' ');
 			}
+			if (k != 0)
+			{	
 				_putchar('\\');
+			}
 				_putchar('\n');
 				spc = 0;/* Resets counts of white spaces */
 				k++;/* Increases limit of white spc in a line*/
