@@ -14,14 +14,18 @@ void print_diagonal(int n)
 	{
 		_putchar('\n');
 	}
-	else
-		for (i = 0; i <= n; i++)/* Number of lines to makee*/
+	for (i = 0; i <= n; i++)/* Number of lines to makee*/
 	{
-		for (; j >= x; x++)/* Number of times to make white spaces before the \ */
+		for (; j >= x; x++) /*Number of times to make white spaces before the \ */
 		{
 			for (; spc <= k; spc++)/*loop for putting number of spaces in the line \ */
 			{
-				_putchar(' ');/*Puts the white space before the \ and new line*/
+				if (k == 0)
+				{
+				_putchar('\\');
+				}
+				else
+					_putchar(' ');
 			}
 				_putchar('\\');
 				_putchar('\n');
@@ -31,4 +35,5 @@ void print_diagonal(int n)
 
 
 	}
+	
 }
