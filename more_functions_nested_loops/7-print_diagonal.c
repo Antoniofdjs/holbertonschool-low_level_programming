@@ -28,10 +28,7 @@ void print_diagonal(int n)
 					if ( k != 0)
 						_putchar(' ');
 			}
-			if (k != 0)
-			{	
 				_putchar('\\');
-			}
 				_putchar('\n');
 				spc = 0;/* Resets counts of white spaces */
 				k++;/* Increases limit of white spc in a line*/
