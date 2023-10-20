@@ -4,11 +4,11 @@
 *main - Prints biggest prime factor for a number
 *
 */
-void main(void)
+int main(void)
 {
-	long long int n = 612852475143;
-	long long int factor;
-	long long int big_prime;
+	long int n = 612852475143;
+	long int factor;
+	long int big_prime;
 	int i = 2;
 
 	factor = n;
@@ -17,11 +17,12 @@ void main(void)
 		if (factor % i == 0)
 		{
 			factor = factor / i;
-			i == 2;
+			i = 2;
 		}
 		else
 			i++;
 	}
 	big_prime = factor;
-	printf("%lld\n", big_prime);
+	printf("%ld\n", big_prime);
+	return (0);
 }
