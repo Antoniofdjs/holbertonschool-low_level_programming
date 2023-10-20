@@ -3,6 +3,7 @@
 /**
 *main - Prints biggest prime factor for a number
 *
+*Return: 0
 */
 int main(void)
 {
