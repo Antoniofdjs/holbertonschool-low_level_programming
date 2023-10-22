@@ -1,35 +1,35 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
  * main - Entry point
  *
  * Return: Always 0
- */
+*/
+
 int main(void)
 {
-int i, j, k;
+	int p, q;
 
-for (i = 0; i <= 9; i++)
-{
-	for (j = 0; j <= 9; j++)
+	for (p = 0; p <= 98; p++)
 	{
-		for (k = 0; k <= 9; k++)
+		for (q = p + 1; q <= 99; q++)
 		{
-			if (i * 10 + j < k)
-			{
-				putchar('0' + i);
-				putchar('0' + j);
-				putchar(' ');
-				putchar('0' + k);
-				if (!(i == 9 && j == 8 && k == 9))
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
+			putchar((p / 10) + '0');
+			putchar((p % 10) + '0');
+			putchar(' ');
+			putchar((q / 10) + '0');
+			putchar((q % 10) + '0');
+
+			if (p == 98 && q == 99)
+				continue;
+
+			putchar(',');
+			putchar(' ');
 		}
 	}
-}
-putchar('\n');
-return (0);
-}
+
+	putchar('\n');
+
+	return (0);
