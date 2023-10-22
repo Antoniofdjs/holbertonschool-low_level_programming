@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main- funcion del main entry
+ * main- Prints all combinations of 3 digits with 0-9
  *
  *
  *Return: devolver 0
@@ -8,25 +8,24 @@
 */
 int main(void)
 {
-	int num = 0;
+	int num = 0, num2;
 	int j = 0;
-	int i = 0;
 
-	for (j = 0; j <= 9; j++)
+	for (j = 0; j <= 7; j++)
 	{
-	for (i = j + 1 ; i <= 9; i++)
+	for (num = j + 1; num <= 8; num++)
 	{
-	for (num = i + 1; num <= 9; num++)
-	{
-		putchar ('0' + j);
-		putchar ('0' + num);
-		putchar ('0' + i);
-		if (j != 8 || num != 9)
+		for (num2 = num + 1; num2 <= 9; num2++)
 		{
+			putchar('0' + j);
+			putchar ('0' + num);
+			putchar('0' + num2);
+			if (j != 7 || num != 8 || num != 9)
+			{
 			putchar(',');
 			putchar(' ');
+			}
 		}
-	}
 	}
 	}
 	putchar('\n');
