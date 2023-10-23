@@ -1,0 +1,26 @@
+#include "main.h"
+/**
+ * print_rev - reverses string
+ *
+ *@s: stores string
+ *
+ */
+
+void print_rev(char *s)
+{
+	int i = 0;
+	char letra;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	while (i >= 0)
+	{
+		letra = s[i];
+		_putchar(letra);
+		i--;
+	}
+	_putchar('\n');
+
+}
