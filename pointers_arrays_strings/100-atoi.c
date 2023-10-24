@@ -22,7 +22,7 @@ int _atoi(char *s)
 	{
 		if (s[j] == '-')
 		{
-			signo = signo * -1;
+			signo *= -1;
 		}
 		if ((s[j] >= '0' && s[j] <= '9'))
 		{
