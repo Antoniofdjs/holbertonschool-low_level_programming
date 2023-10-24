@@ -28,7 +28,7 @@ int _atoi(char *s)
 				end++;
 			}
 			result = result * 10 + (s[j] - '0');
-			if (s[j + 1] <= '0' || s[j + 1] >= '9')
+			if (s[j + 1] < '0' || s[j + 1] > '9')
 			{
 				j = i + 1;
 			}
