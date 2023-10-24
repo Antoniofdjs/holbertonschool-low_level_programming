@@ -10,7 +10,7 @@
 int _atoi(char *s)
 {
 	int j = 0, i = 0;
-	int signo = 1, end = 0;
+	int signo = 1;
 	int result = 0;
 
 	while (s[i] != '\0')
@@ -20,13 +20,12 @@ int _atoi(char *s)
 	i--;
 	for (j = 0; j <= i; j++)
 	{
+		if (s[j] == '-')
+		{
+			signo = signo * -1;
+		}
 		if ((s[j] >= '0' && s[j] <= '9'))
 		{
-			if (s[j - 1] == '-' && end == 0)
-			{
-				signo = -1;
-				end++;
-			}
 			result = result * 10 + (s[j] - '0');
 			if (s[j + 1] < '0' || s[j + 1] > '9')
 			{
