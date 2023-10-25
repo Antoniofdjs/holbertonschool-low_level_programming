@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <limits.h>
 
 /**
  *_atoi - takes strings of numbers an puts them in a int
@@ -21,17 +22,30 @@ int _atoi(char *s)
 	for (j = 0; j <= i; j++)
 	{
 		if (s[j] == '-')
+	{
+		signo *= -1;
+	}
+		if (s[j] >= '0' && s[j] <= '9')
+	{
+
+		if (result > INT_MAX / 10 || (result == INT_MAX / 10
+					&& (s[j] - '0') > INT_MAX % 10))
 		{
-			signo *= -1;
-		}
-		if ((s[j] >= '0' && s[j] <= '9'))
-		{
-			result = result * 10 + (s[j] - '0');
-			if (s[j + 1] < '0' || s[j + 1] > '9')
+			if (signo == 1)
 			{
-				j = i + 1;
+				return (INT_MAX);
+			}
+			else
+			{
+				return (INT_MIN);
 			}
 		}
+		result = result * 10 + (s[j] - '0');
+		if (s[j + 1] < '0' || s[j + 1] > '9')
+		{
+			j = i + 1;
+		}
+	}
 	}
 	result = result * signo;
 	return (result);
