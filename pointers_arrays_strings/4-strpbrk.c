@@ -4,7 +4,7 @@
 *
 *@accept: String to find inside another
 *@s: Original string
-*Return: a string or nul depending if strpbrk is true
+*Return: a string or nul depending if is true
 */
 
 char *_strpbrk(char *s, char *accept)
