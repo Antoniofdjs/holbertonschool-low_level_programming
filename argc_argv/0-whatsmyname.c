@@ -6,7 +6,7 @@
  *@argc: counter of total arguments in prompt line
  *@argv: values of specific argc index in the string prompt
  */
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	(void) argc;
 	
@@ -15,4 +15,5 @@ void main(int argc, char *argv[])
 	printf("%s\n", *argv);
 	argv++;
 	}
+	return (0);
 }
