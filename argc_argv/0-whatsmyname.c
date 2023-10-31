@@ -5,11 +5,12 @@
  *
  *@argc: counter of total arguments in prompt line
  *@argv: values of specific argc index in the string prompt
+ *Return: 0
  */
 int main(int argc, char *argv[])
 {
 	(void) argc;
-	
+
 	while (*argv)
 	{
 	printf("%s\n", *argv);
