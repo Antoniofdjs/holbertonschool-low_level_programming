@@ -40,5 +40,5 @@ int main(int argc, char *argv[])
 			i++;/*Next string*/
 	}
 	printf("%d\n", result);
-	return (1);
+	return (0);
 	}
