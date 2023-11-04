@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 /**
 *_strdup- create a pointer duplicate of a string
 *
@@ -7,14 +8,15 @@
 */
 char *_strdup(char *str)
 {
-	char *ptr = (char *)malloc(1000* sizeof(char));
+	unsigned int size = strlen(str);
+	char *ptr = (char *)malloc(size * sizeof(char));
 	unsigned int i;
 
 	if ((ptr == NULL) || (str[0] == '\0'))
 	{
 		return (NULL);
 	}
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; i < size; i++)
 	{
 		ptr[i] = str[i];
 	}
