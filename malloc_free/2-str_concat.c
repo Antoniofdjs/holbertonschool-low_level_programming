@@ -21,20 +21,9 @@ char *str_concat(char *s1, char *s2)
 	ptr = (char *)malloc((size + 1) * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
-	if (s1 == NULL)
-	{
+	if (s1 != NULL)
 		strcpy(ptr, s1);
-		return (ptr);
-	}
-	else if (s2 == NULL)
-	{
-		strcpy(ptr, s2);
-		return (ptr);
-	}
-	else
-	{
-		strcpy(ptr, s1);
+	if (s2 != NULL)
 		strcat(ptr, s2);
-	}
 	return (ptr);
 }
