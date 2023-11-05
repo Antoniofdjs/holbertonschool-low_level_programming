@@ -13,7 +13,7 @@ char *str_concat(char *s1, char *s2)
 	char *ptr;
 	unsigned int size, size1, size2;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL && s2 == NULL)
 		return (NULL);
 	size1 = strlen(s1);
 	size2 = strlen(s2);
@@ -21,7 +21,20 @@ char *str_concat(char *s1, char *s2)
 	ptr = (char *)malloc((size + 1) * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
-	strcpy(ptr, s1);
-	strcat(ptr, s2);
+	if (s1 == NULL)
+	{
+		strcpy(ptr, s1);
+		return (ptr);
+	}
+	else if (s2 == NULL)
+	{
+		strcpy(ptr, s2);
+		return (ptr);
+	}
+	else
+	{
+		strcpy(ptr, s1);
+		strcat(ptr, s2);
+	}
 	return (ptr);
 }
