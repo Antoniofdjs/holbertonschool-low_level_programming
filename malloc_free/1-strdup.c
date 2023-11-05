@@ -8,7 +8,7 @@
 */
 char *_strdup(char *str)
 {
-	unsigned int size = 1 + strlen(str);
+	unsigned int size;
 	char *ptr;
 	unsigned int i;
 
@@ -16,8 +16,9 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
+	size = 1 + strlen(str);
 	ptr = (char *)malloc((size) * sizeof(char));
-	if (ptr == NULL && str == NULL)
+	if (ptr == NULL)
 	{
 		return (NULL);
 	}
