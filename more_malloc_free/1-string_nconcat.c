@@ -14,13 +14,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int size1, size2;
 
 	if (s1 == NULL)
-		size1 = 1;
+		size1 = 0;
 	else
 	{
 		size1 = strlen(s1);
 	}
 	if (s2 == NULL)
-		size2 = 1;
+		size2 = 0;
 	else
 	{
 		size2 = strlen(s2);
