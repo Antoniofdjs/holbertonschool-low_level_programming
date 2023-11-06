@@ -32,10 +32,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	ptr = malloc(size1 + size2 + 1);
 	if (ptr == NULL)
 		return (NULL);
-	if (s1 != NULL);
-		strcpy(ptr, s1)
-	if (s2 != NULL);
-		strncat(ptr, s2, n)
+	if (s1 != NULL)
+		strcpy(ptr, s1);
+	if (s2 != NULL)
+		strncat(ptr, s2, n);
 	return (ptr);
 
 }
