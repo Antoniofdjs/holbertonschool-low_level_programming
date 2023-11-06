@@ -17,19 +17,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		size1 = 1;
 	else
 	{
-		size1 = strlen(s1) + 1;
+		size1 = strlen(s1);
 	}
 	if (s2 == NULL)
 		size2 = 1;
 	else
 	{
-		size2 = strlen(s2) + 1;
+		size2 = strlen(s2);
 	}
-	if (n < size2 && n > 0)
+	if (n < size2)
 	{
 		size2 = n;
 	}
-	ptr = malloc(size1 + size2);
+	ptr = malloc(size1 + size2 + 1);
 	if (ptr == NULL)
 		return (NULL);
 	strcpy(ptr, s1);
