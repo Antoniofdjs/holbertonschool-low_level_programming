@@ -1,38 +1,37 @@
 #include "main.h"
 #include <stdlib.h>
 #include <string.h>
-/**
- *argstostr- fuction to concat all arguments of program
- *
- *@ac: argc count
- *@av: argv [i][j]
- *Return: ptr
- */
+
 char *argstostr(int ac, char **av)
 {
-	char *ptr;
-	int size = 0;
-	int ntotal = ac;
-	unsigned int j = 0;
-	int k = 0, i = 0;
+    char *result;
+    int total_length = 0;
+    int index = 0;
+    int i, j;
 
-	if (ac == 0 || av == NULL)
-		return (NULL);
-	for (i = 0; i < ac; i++)
-		size = size + strlen(av[i]);/*space for strings in arguments*/
-	ptr = malloc(size + ntotal + 1);
-	if (ptr == NULL)
-		return (NULL);
-	for (k = 0; k < ac; k++)
-	{
-		for (j = 0; j < strlen(av[k]); j++)
-		{	if(av[k][j] != '\0')
-				ptr[i] = av[k][j];
-			i++;
-		}
-		ptr[i] = '\n';
-		i++;
-	}
-	ptr[i] = '\0';
-	return (ptr);
+    if (ac == 0 || av == NULL)
+        return (NULL);
+
+    for (i = 0; i < ac; i++) {
+        total_length += strlen(av[i]);
+    }
+
+    result = malloc(total_length + ac + 1);
+    if (result == NULL)
+        return (NULL);
+
+    for (i = 0; i < ac; i++) {
+        for (j = 0; av[i][j] != '\0'; j++) {
+            result[index++] = av[i][j];
+        }
+
+        if (i < ac - 1) {
+            result[index++] = ' ';
+        } else {
+            result[index++] = '\n';
+        }
+    }
+
+    result[index] = '\0';
+    return result;
 }
