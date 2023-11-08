@@ -26,7 +26,7 @@ char *argstostr(int ac, char **av)
         }
 
         if (i < ac - 1) {
-            result[index++] = ' ';
+            result[index++] = '\n';
         } else {
             result[index++] = '\n';
         }
