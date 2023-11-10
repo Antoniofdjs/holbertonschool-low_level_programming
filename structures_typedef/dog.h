@@ -14,4 +14,4 @@ float age;
 char *owner;
 };
 
-#endif // DOG_STRUCT_H
+#endif
