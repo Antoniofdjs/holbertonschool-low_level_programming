@@ -4,8 +4,8 @@
  *@age: float for age of dog
  *@owner: pointer to name of owner
 */
-#ifndef DOG_STRUCT_H
-#define DOG_STRUCT_H
+#ifndef DOG_H
+#define DOG_H
 
 struct dog
 {
@@ -14,4 +14,4 @@ float age;
 char *owner;
 };
 
-#endif
+#endif DOG_H
