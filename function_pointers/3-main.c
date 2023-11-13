@@ -7,6 +7,7 @@
  *
  * @argc: argument count
  * @argv: argment values
+ * Return: 0 if succeded
  */
 
 int main(int argc, char *argv[])
