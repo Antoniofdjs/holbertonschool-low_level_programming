@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	int result = 0;
 	char *operator;
 
-	if (argc != 4)
+	if (argc != 4)/* Verify if we have the correct count of arguments */
 	{
 		printf("Error\n");
 		exit(98);
@@ -26,6 +26,12 @@ int main(int argc, char *argv[])
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 	operator = argv[2];
+
+/*
+ * call function to get the correct operation to use with our argvalues
+ * num1 and num2 will assign the ints from the command line
+ * the result will be stored in result
+ */
 
 	result = (*get_op_func(operator))(num1, num2);
 
