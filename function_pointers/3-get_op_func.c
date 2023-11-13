@@ -20,7 +20,7 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int i;
 
-	while (ops[i].op != NULL)
+	while (i < 5)
 	{
 		printf("While indice %d\n", i);
 		if (*s == ops[i].op[0])
