@@ -27,7 +27,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 				printf("(nil)%s", separator);
 		}
 		else
-			printf("%s", current_str_ptr);
+		{
+			if (current_str_ptr != NULL)/*sperator null and we are on last string*/
+				printf("%s", current_str_ptr);
+			else
+				printf("(nil)");
+		}
 	}
 
 	va_end(my_args);/* End my va list */
