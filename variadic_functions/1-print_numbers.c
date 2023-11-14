@@ -13,14 +13,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	va_list my_args;/* my variable for va list */
 
-	if (n == 0)
-		return;
-
 	va_start(my_args, n);/* initialize with n arguments */
 
 	for (i = 0; i < n; i++)
 	{
-		if (separator != NULL && i != n - 1)/* Prints if not null and not last number */
+		if (separator != NULL && i != n - 1)/* Print if != null and not last num */
 		{
 			if (i != n - 1)
 				printf("%d%s", va_arg(my_args, int), separator);
