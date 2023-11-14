@@ -19,7 +19,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		if (separator != NULL && i != n - 1)/* Print if != null and not last num */
 		{
-			if (i != n - 1)
 				printf("%d%s", va_arg(my_args, int), separator);
 		}
 		else
