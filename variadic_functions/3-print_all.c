@@ -70,7 +70,7 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", separator);/*prnts before function, last print has no sep*/
 				my_data[j].f(my_args);/*call matching print function */
-				separator = ", ";/*set value atfer 1st print*/
+				separator = ", ";/*set value after 1st print*/
 				break;
 			}
 			j++;
