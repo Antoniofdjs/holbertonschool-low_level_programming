@@ -63,15 +63,16 @@ void print_all(const char * const format, ...)
 	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;
-		while (my_data[j].f != NULL && *(my_data[j].type) != format[i])
+		while (my_data[j].f != NULL)
 		{
-			j++;
-			if (my_data[j].f != NULL)
+			if (*my_data[j].type == format[i])
 			{
 				printf("%s", separator);
-				my_data[j].f(&my_args);
+				my_data[j].f(my_args);
 				separator = ", ";
+				break;
 			}
+			j++;
 		}
 		i++;
 	}
