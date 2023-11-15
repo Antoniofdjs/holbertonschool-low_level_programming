@@ -48,9 +48,9 @@ void print_s(va_list *my_args)
 
 void print_all(const char * const format, ...)
 {
-	int size, i = 0, j = 0;
+	int i = 0, j = 0;
 	va_list my_args;
-	char separator = "";
+	char *separator = "";
 	data my_data[] = {
 		{"c", print_c},
 		{"i", print_i},
@@ -58,17 +58,18 @@ void print_all(const char * const format, ...)
 		{"s", print_s},
 		{NULL, NULL}
 	};
-	
+
 	va_start(my_args, format);
 	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;
-		while (my_data.type[j] != format[i] && my_data.f != NULL)
+		while (my_data[j].f != NULL && *(my_data[j].type) != format[i])
 		{
-			j++
-			if (my_data.f != NULL)
+			j++;
+			if (my_data[j].f != NULL)
 			{
 				printf("%s", separator);
+				my_data[j].f(&my_args);
 				separator = ", ";
 			}
 		}
