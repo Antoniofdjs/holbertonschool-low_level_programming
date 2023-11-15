@@ -69,7 +69,7 @@ void print_all(const char * const format, ...)
 			if (*my_data[j].type == format[i])/*match letters = data type */
 			{
 				printf("%s", separator);/*prnts before function, last print has no sep*/
-				my_data[j].f(my_args);/*call matching function */
+				my_data[j].f(my_args);/*call matching print function */
 				separator = ", ";/*set value atfer 1st print*/
 				break;
 			}
