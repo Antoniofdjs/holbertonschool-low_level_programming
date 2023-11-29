@@ -23,12 +23,12 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	new_node->n = copy_n;
 	new_node->next = *head;
-	new_node->prev = NULL;
+	new_node->prev = NULL; /* new node always prev = null */
 
-	if (*head != NULL)
-		(*head)->prev = new_node;
+	if (*head != NULL) /* list not empty, old node must change ->prev */
+		(*head)->prev = new_node; /* change prev from old node */
 
-	*head = new_node;
+	*head = new_node; /* move head to new node */
 
 	return (new_node);
 }
