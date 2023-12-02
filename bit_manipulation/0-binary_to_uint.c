@@ -14,16 +14,19 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int dec_val = 1; /*value after 2^pwr based on position*/
 	unsigned int sizelen = 0;
 
-	sizelen = strlen(b);
-	for (i = sizelen - 1 ; i >= 0; i--)
+	if (b != NULL) /* if b null will return 0 */
 	{
-		if (b[i] != '0' && b[i] != '1')
-			return (0);
+		sizelen = strlen(b);
+		for (i = sizelen - 1 ; i >= 0; i--)
+		{
+			if (b[i] != '0' && b[i] != '1')
+				return (0);
 
-		if (b[i] == '1')
-			total = total + dec_val;
+			if (b[i] == '1')
+				total = total + dec_val;
 
-		dec_val = dec_val * 2;
+			dec_val = dec_val * 2;
+		}
 	}
 	return (total);
 }
