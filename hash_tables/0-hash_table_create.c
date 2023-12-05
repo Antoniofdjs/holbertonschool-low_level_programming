@@ -19,7 +19,12 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (hash_table == NULL)
 		return (NULL);
 
-	hash_table->array = malloc(sizeof(hash_node_t *) * size);/*first of each list*/
+	/*
+	 * next line assigns malloc for each first node
+	 * our array index points to the first node of each list
+	 */
+
+	hash_table->array = malloc(sizeof(hash_node_t *) * size);
 
 	if (hash_table->array == NULL)
 	{
