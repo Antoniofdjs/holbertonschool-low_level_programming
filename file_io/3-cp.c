@@ -16,7 +16,7 @@ int num1 = 1024, num2 = 0;
 char buf[1024];
 
 if (argc != 3)
-	dprintf(STDERR_FILENO, "Usage: cp source_file dest_file\n"), exit(97);
+	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 source = open(argv[1], O_RDONLY); /* open source, read */
 if (source == -1)
 {
