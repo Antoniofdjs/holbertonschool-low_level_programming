@@ -25,7 +25,7 @@ int create_file(const char *filename, char *text_content)
 	while (text_content[letters] != '\0')
 		letters++; /* char count */
 
-	my_write = write(fd, text_content, letters); /*store int from write, also write into fd */
+	my_write = write(fd, text_content, letters); /*store int,write into fd */
 
 	if (my_write == -1)
 		return (-1);
