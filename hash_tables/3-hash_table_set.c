@@ -19,7 +19,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (key == NULL || *key == '\0' || value == NULL || ht == NULL)
 		return (0);
 
-	size = ht->size;
+	size = ht->size;/* size of table array */
 	index = (hash_djb2((const unsigned char *)key) % size);
 
 	current_node = ht->array[index]; /* get current node from index */
@@ -28,11 +28,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(current_node->key, key) == 0) /* match key, update new value */
 		{
-			current_node->value = strdup(value);
+			current_node->value = strdup(value); /* update value */
 			return (1);
 		}
 		current_node = current_node->next;/* next node */
 	}
+
+	/*
+	 * this block of code only happens if no update was made
+	 */
 
 	new_node = malloc(sizeof(hash_node_t)); /* create new node*/
 	if (new_node == NULL)
