@@ -28,6 +28,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(current_node->key, key) == 0) /* match key, update new value */
 		{
+			free(current_node->value);
 			current_node->value = strdup(value); /* update value */
 			return (1);
 		}
